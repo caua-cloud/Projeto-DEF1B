@@ -1,13 +1,5 @@
-/* ============================================
-   RESET E CONFIGURAÇÕES BASE
-   ============================================ */
 
-/* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/*
+
 /* Variáveis CSS */
 :root {
     --cor-texto: #1a1a1a;
@@ -32,9 +24,7 @@ body {
     background: var(--cor-fundo);
 }
 
-/* ============================================
-   ACESSIBILIDADE
-   ============================================ */
+/*ACESSIBILIDADE */
 
 .skip-link {
     position: absolute;
@@ -62,9 +52,7 @@ body {
     white-space: nowrap;
 }
 
-/* ============================================
-   HEADER
-   ============================================ */
+/*  HEADER */
 
 header {
     background: var(--cor-fundo);
@@ -88,9 +76,7 @@ header {
     color: var(--cor-texto);
 }
 
-/* ============================================
-   ÍCONES DO HEADER
-   ============================================ */
+/*  ÍCONES DO HEADER */
 
 .header-icons {
     display: flex;
@@ -143,9 +129,7 @@ header {
     line-height: 1;
 }
 
-/* ============================================
-   NAVEGAÇÃO
-   ============================================ */
+/* NAVEGAÇÃO*/
 
 nav ul {
     display: flex;
@@ -186,9 +170,7 @@ nav a:focus {
     outline: none;
 }
 
-/* ============================================
-   GRID DE MARCAS - LAYOUT HORIZONTAL
-   ============================================ */
+/* GRID DE MARCAS - LAYOUT HORIZONTAL*/
 
 .brands-container {
     display: grid;
@@ -282,9 +264,7 @@ nav a:focus {
     margin: 0 var(--espacamento-xs);
 }
 
-/* ============================================
-   NEWSLETTER
-   ============================================ */
+/* NEWSLETTER*/
 
 .newsletter {
     background: var(--cor-cinza-claro);
@@ -350,9 +330,7 @@ nav a:focus {
     outline-offset: 2px;
 }
 
-/* ============================================
-   FOOTER - NOVO LAYOUT
-   ============================================ */
+/* FOOTER - NOVO LAYOUT */
 
 footer {
     background: var(--cor-fundo);
@@ -452,9 +430,7 @@ footer {
     opacity: 1;
 }
 
-/* ============================================
-   MEDIA QUERIES - RESPONSIVIDADE
-   ============================================ */
+/* MEDIA QUERIES - RESPONSIVIDADE*/
 
 /* Tablet - 768px */
 @media (min-width: 768px) {
