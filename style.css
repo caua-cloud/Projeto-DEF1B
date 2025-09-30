@@ -2,12 +2,12 @@
    RESET E CONFIGURAÇÕES BASE
    ============================================ */
 
-* {
+/* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/*
 /* Variáveis CSS */
 :root {
     --cor-texto: #1a1a1a;
@@ -68,7 +68,7 @@ body {
 
 header {
     background: var(--cor-fundo);
-    padding: var(--espacamento-md) var(--espacamento-lg);
+    padding: var(--espacamento-sm) var(--espacamento-md);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -78,10 +78,11 @@ header {
     align-items: center;
     max-width: 1600px;
     margin: 0 auto;
+    gap: var(--espacamento-sm);
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 300;
     letter-spacing: 0.3em;
     color: var(--cor-texto);
@@ -93,7 +94,7 @@ header {
 
 .header-icons {
     display: flex;
-    gap: var(--espacamento-md);
+    gap: var(--espacamento-sm);
     align-items: center;
 }
 
@@ -109,8 +110,8 @@ header {
 }
 
 .icon-link svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     stroke-width: 1.5;
 }
 
@@ -350,56 +351,105 @@ nav a:focus {
 }
 
 /* ============================================
-   FOOTER
+   FOOTER - NOVO LAYOUT
    ============================================ */
 
 footer {
-    background: var(--cor-texto);
-    color: var(--cor-fundo);
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
     padding: var(--espacamento-xl) var(--espacamento-md);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .footer-content {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--espacamento-lg);
 }
 
-.footer-section h3 {
-    font-size: 0.9rem;
-    font-weight: 400;
-    letter-spacing: 0.2em;
-    margin-bottom: var(--espacamento-sm);
+.footer-column h3 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--espacamento-md);
     text-transform: uppercase;
+    color: var(--cor-texto);
 }
 
-.footer-section ul {
+.footer-column ul {
     list-style: none;
 }
 
-.footer-section li {
-    margin-bottom: var(--espacamento-xs);
+.footer-column li {
+    margin-bottom: var(--espacamento-sm);
 }
 
-.footer-section a {
-    color: var(--cor-fundo);
+.footer-column a {
+    color: var(--cor-texto);
     text-decoration: none;
-    font-size: 0.9rem;
-    opacity: 0.7;
+    font-size: 0.85rem;
+    font-weight: 300;
     transition: var(--transicao-padrao);
     display: inline-block;
-    padding: var(--espacamento-xs) 0;
-    letter-spacing: 0.05em;
 }
 
-.footer-section a:hover,
-.footer-section a:focus {
-    opacity: 1;
-    outline: 2px solid var(--cor-fundo);
+.footer-column a:hover,
+.footer-column a:focus {
+    opacity: 0.6;
+    outline: 2px solid var(--cor-texto);
     outline-offset: 2px;
-    padding-left: var(--espacamento-xs);
+}
+
+/* Coluna de marcas */
+.footer-brands .brand-list {
+    margin-bottom: var(--espacamento-lg);
+}
+
+.footer-brands .brand-list li {
+    margin-bottom: var(--espacamento-md);
+}
+
+.footer-brands .brand-list a {
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+/* Métodos de pagamento */
+.payment-section {
+    margin-top: var(--espacamento-xl);
+}
+
+.payment-section h4 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--espacamento-md);
+    text-transform: uppercase;
+    color: var(--cor-texto);
+}
+
+.payment-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacamento-md);
+    align-items: center;
+}
+
+.payment-icon {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: var(--transicao-padrao);
+}
+
+.payment-icon:hover {
+    filter: grayscale(0%);
+    opacity: 1;
 }
 
 /* ============================================
@@ -423,6 +473,19 @@ footer {
     .header-icons {
         gap: var(--espacamento-md);
     }
+
+    .icon-link svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .logo {
+        font-size: 1.75rem;
+    }
+
+    header {
+        padding: var(--espacamento-md) var(--espacamento-lg);
+    }
 }
 
 /* Desktop - 1024px */
@@ -440,11 +503,20 @@ footer {
     }
 
     .footer-content {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 
     .newsletter-form {
         max-width: 600px;
+    }
+
+    .icon-link svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .logo {
+        font-size: 2rem;
     }
 }
 
@@ -456,6 +528,10 @@ footer {
 
     .brand-info {
         padding: var(--espacamento-lg) var(--espacamento-md);
+    }
+
+    .payment-icons {
+        gap: var(--espacamento-lg);
     }
 }
 
